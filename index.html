@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   
+   
+   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Carousel</title>
+        <style>
+            img { width: 100%; width: 300px;  }
+            .carousel { text-align: center; }
+            button { margin: 5px; }
+        </style>
+   
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Image Carousel</title>
+   <style>
+       img { width: 100%; max-width:300px; }
+       .carousel { text-align: center; }
+       button { margin: 5px; }
+   </style>
+
+
+
+   
+    </head>
+    <body>
+        <div>
+            <!-- HERO SECTION -->
+            <div id="hero">
+                <h1 id="title">Visit ISTANBUL</h1>
+                <img src="kopru.webp" alt="brıdge ıstanbul"  class="imgcircle">
+
+                <h3 id="subtitle">Discover the rich culture, history, and vibrant life of this amazing city</h3>
+            </div>
+            
+            <!-- ACTIVITIES SECTION -->
+             <div>
+                <h3>Top 3 activities to do at ISTANBUL</h3>
+                <div class="container">
+        
+                    <div class="item">
+                        <img src="sofia.jpeg" alt="mosque" class="imgcircle">
+                        <h4>Experience the Splendor of Hagia Sophia</h4>
+                        <p>Step inside one of the world’s greatest architectural marvels.</p>
+                    </div>
+                    <div class="item"> 
+                        <img src="kızk2.jpeg" alt="A tower" class="imgcircle">
+                        <h4>Romance of Maiden's Tower</h4>
+                        <p> Sail to the Maiden’s Tower, a legendary structure that has guarded the Bosphorus for centuries. </p>
+                    </div>
+                    <div class="item">
+                        <img src="sea1.jpeg" alt="beach" class="imgcircle">
+                        <h4>Enjoy The Beaches</h4>
+                        <p>Istanbul captivates tourists with its stunning beaches, crystal-clear sea, and warm summer sun.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <body>
+                <div class="carousel">
+                    <img id="carouselImage" src="" alt="Image Carousel">
+                    <div>
+                        <button id="prevButton">Previous</button>
+                        <button id="nextButton">Next</button>
+                    </div>
+                </div>
+            
+                <script>
+                    const images = [
+                        "https://media.istockphoto.com/id/1293322201/tr/foto%C4%9Fraf/ortak%C3%B6y-camii-ve-g%C3%BCn-bat%C4%B1m%C4%B1nda-bo%C4%9Faz-k%C3%B6pr%C3%BCs%C3%BC-istanbul-t%C3%BCrkiye.jpg?s=1024x1024&w=is&k=20&c=wTyGkrvPTCtEy4xPNjVkMHuTmZzv9uZLW4sBfoGC0LU=",
+                        "https://media.istockphoto.com/id/1143996988/tr/foto%C4%9Fraf/istanbul-da-k%C4%B1z-kulesi-t%C3%BCrkiye.jpg?s=1024x1024&w=is&k=20&c=cRBvmye5Ovb7vC8eAVnJRYorvHHSGjUSzJUkAi6Gy08=",
+                        "https://media.istockphoto.com/id/903934818/tr/foto%C4%9Fraf/istanbul-say%C4%B1s%C4%B1.webp?s=1024x1024&w=is&k=20&c=Q6o4C-E-zPuVqsHQ7eMKa-tX_A1VY6dWUz6v3CPNgjY="
+                    ];
+            
+                    let currentIndex = 0;
+            
+                    // Function to update the image
+                    function updateImage() {
+                        const imageElement = document.getElementById("carouselImage");
+                        imageElement.src = images[currentIndex];
+                    }
+            
+                    // Event listeners for buttons
+                    document.getElementById("prevButton").addEventListener("click", () => {
+                        currentIndex = (currentIndex - 1 + images.length) % images.length;
+                        updateImage();
+                    });
+            
+                    document.getElementById("nextButton").addEventListener("click", () => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        updateImage();
+                    });
+            
+                    // Initialize the first image
+                    updateImage();
+                </script>
+
+
+
+
+            <!-- GUIDE SECTION -->
+             <div class="card">
+                 <div class="item"> 
+                    <h3>Your guide</h3>
+                    <p>"I have lived at Istanbul for over 20 years, so I can show you all of its best parts and hidden secrets."</p>
+                    <h4>Betul Marcia</h4> 
+                    <a href=" https://mail.google.com/mail/u/0/#inbox?compose=new">btl-mrc@gmail.com</a>
+                </div>
+                <img  id="avatar" src="flag.jpeg" >
+             </div>
+        </div>
+
+
+
+
+    </body>
+</html>
+
+     
